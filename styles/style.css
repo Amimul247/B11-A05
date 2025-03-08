@@ -1,0 +1,22 @@
+.abc {
+  margin: 12px;
+  padding: 12px;
+  background-color: #F4F7FF;
+  border-radius: 8px;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 40px;
+}
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+th {
+  background-color: #c7c4c4;
+}

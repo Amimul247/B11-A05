@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color on Click</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click the Button to Change Background Color</h2>
+    <button id="changeColorBtn">Change Color</button>
+
+    <script>
+        // ব্যাকগ্রাউন্ড কালার পরিবর্তন করার ফাংশন
+        function changeBackgroundColor() {
+            const colors = ["red", "blue", "green", "purple", "orange", "pink", "yellow", "cyan"]; // কালার লিস্ট
+            const randomColor = colors[Math.floor(Math.random() * colors.length)]; // র্যান্ডম কালার সিলেক্ট করা
+            document.body.style.backgroundColor = randomColor; // ব্যাকগ্রাউন্ড কালার পরিবর্তন
+        }
+
+        // বাটনে ইভেন্ট লিসেনার যোগ করা
+        document.getElementById("changeColorBtn").addEventListener("click", changeBackgroundColor);
+    </script>
+
+</body>
+</html>
+
