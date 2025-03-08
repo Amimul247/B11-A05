@@ -3,130 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Questions Ans: Section</title>
+  <title>Main</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <section class="bg-[#F4F7FF] max-h-screen mx-auto">
+<body class="">
+    <section id="section" class="bg-[#F4F7FF] min-h-screen max-w-screen-2xl  mx-auto py-6">
 
-        <nav class="flex justify-between items-center bg-white  max-w-screen-xl mx-auto rounded-2xl p-4">
-          <div class="flex items-center">
-              <img class="w-12 h-12" src="assets/logo.png" alt="input-account-number">
-              <h1>Dev<b>Board</b></h1>
-            </div>
-            <div class="flex items-center gap-2">
-                <button onclick="backToBoard()" class="btn bg-[#3752FD] text-white rounded-xl">Back to Home</button>
-            </div>
-        </nav>
+          <nav class="flex justify-between items-center bg-white  max-w-screen-xl mx-auto rounded-2xl p-4">
+            <div class="flex items-center">
+                <img class="w-12 h-12" src="assets/logo.png" alt="input-account-number">
+                <h1>Dev<b>Board</b></h1>
+              </div>
+              <!-- point score-point -->
+              <div class="flex items-center gap-2">
+                <button class="btn rounded-full "><img src="assets/checkbox.png" alt=""><span id="score-point" class="font-bold text-2xl">23</span></button>
+                <button id="theme-btn" class="btn rounded-full "><img src="assets/theme-btn.png" alt="Theme Button"></button>
+              </div>
+          </nav>
+          <section id="section-1" class="flex justify-between  max-w-screen-xl mx-auto rounded-2xl my-4 gap-4 bg-white p-4">
+                <!-- Left div  -->
+                <div class="w-3/4">
+                    <!-- left top div  -->
+                    <div class="flex justify-between gap-3">
+                        <!-- Task Assaigned  -->
+                        <div class="flex items-center w-1/4 h-32 bg-[#F4F7FF] rounded-2xl pl-4 gap-3">
+                            <div class="h-16 w-16 bg-white rounded-full flex justify-center items-center">
+                                <img class="h-7 w-7" src="assets/checkbox.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-opacity-80">Task Assigned</h3>
+                                <h1 class="font-bold text-3xl pt-0 mt-0"><span id="task-number">06</span></h1>
+                            </div>
+                        </div>
+                        <!-- Discover Something  -->
+                        <button id="discover-something-btn" onclick="goToNextPage()" class="btn flex justify-start items-center w-2/4 h-32 bg-[#3752FD] rounded-2xl gap-3">
+                            <div class="">
+                                <img class="h-20 w-20" src="assets/board.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white text-start">Discover Something <br> New Today!</h3>
+                            </div>
+                        </button>
+                        <!-- date  -->
+                        <div class="flex items-center w-1/4 h-32 bg-[#F4F7FF] rounded-2xl pl-4 gap-3">
+                            <div class="h-16 w-16 bg-white rounded-full flex justify-center items-center">
+                                <img class="h-7 w-7" src="assets/calender.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-opacity-80 font-bold text-xl pb-0 mb-0">Wed,</h3>
+                                <h1 id="date" class="font-bold text-xl pt-0 mt-0">date</h1>
+                            </div>
+                        </div>
+                    </div>
 
-        <header>
-            <h1 class="text-center mt-10 mb-3 font-bold text-3xl">Blogs</h1>
-
-            <div class="max-w-screen-xl  mx-auto">
-
-              <div class="collapse bg-base-100 border border-base-300 ">
-                <input type="radio" name="my-accordion-1" checked="checked" />
-                <div class="collapse-title font-semibold text-xl">Question-1: What are the different ways to select an element in the DOM?</div>
-                <div class="collapse-content text-sm">DOM  থেকে বিভিন্ন উপায়ে element  সিলেক্ট করা যায় নিচে আমার জানা কয়েকটা সিলেক্টর এর নাম দিলাম কারণ আমি এখনো সব গুলো সম্পর্কে জানি না
-                  <ul class="px-10 pb-6">
-                    <li>1. getElementById() tag  এর id দিয়ে টার্গেট করে </li>
-                    <li>2. getElementsByClassName() ক্লাস নাম একাধিক থাকতে পারে তাই সবাইকে একসাথে টার্গেট করা যায়। </li>
-                    <li>3. getElementsByTagName() direct tag name  দিয়ে সিলেক্ট  করা যায়।</li>
-                    <li>4. getElementsByName() direct নাম দিয়ে element ধরা যায় </li>
-                    <li>5. querySelector() বেশি ফ্লেক্সিবল ভাবে কাজ করা যায় এবং CSS সিলেক্টর ব্যবহারকরা যায়। </li>
-                    <li>6. querySelectorAll() বেশি ফ্লেক্সিবল ভাবে কাজ করা যায় এবং CSS সিলেক্টর ব্যবহারকরা যায়। </li>
-                    <li></li>
-                  </ul>
+                    <!-- left bottom div  -->
+                    <div class= "grid grid-cols-3 gap-4 bg-white p-4 mt-4 rounded-2xl">
+                        <!-- cart one -->
+                        <div id="section-2" class="bg-[#F4F7FF] rounded-2xl p-3">
+                            <button class=" btn bg-white rounded-xl ">ShopEase</button>
+                            <h1 class="text-2xl font-medium my-2">Fix Mobile Button Issue</h1>
+                            <p class="bg-white p-4 rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            <div class="flex justify-between items-center pt-5">
+                                <p>Deadline <br> 21 March 2025</p>
+                                <button id="completed-btn-01" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                            </div>
+                        </div>       
+                          <!-- cart two -->
+                        <div id="section-3" class="bg-[#F4F7FF] rounded-2xl p-3">
+                            <button class=" btn bg-white rounded-xl ">CloudSync</button>
+                            <h1 class="text-2xl font-medium my-2">Add Dark Mode</h1>
+                            <p class="bg-white p-4 rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            <div class="flex justify-between items-center pt-5">
+                                <p>Deadline <br> 21 March 2025</p>
+                                <button id="completed-btn-02" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                            </div>
+                        </div>                        
+                        <div id="section-4" class="bg-[#F4F7FF] rounded-2xl p-3">
+                            <button class=" btn bg-white rounded-xl ">SwiftPay</button>
+                            <h1 class="text-2xl font-medium my-2">Optimize  Home page </h1>
+                            <p class="bg-white p-4 rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            <div class="flex justify-between items-center pt-5">
+                                <p>Deadline <br> 21 March 2025</p>
+                                <button id="completed-btn-03" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                            </div>
+                        </div>                        
+                        <div id="section-5" class="bg-[#F4F7FF] rounded-2xl p-3">
+                            <button class=" btn bg-white rounded-xl ">Meta</button>
+                            <h1 class="text-2xl font-medium my-2">Add new emoji 🤲</h1>
+                            <p class="bg-white p-4 rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            <div class="flex justify-between items-center pt-5">
+                                <p>Deadline <br> 21 March 2025</p>
+                                <button id="completed-btn-04" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                            </div>
+                        </div>                        
+                        <div id="section-6" class="bg-[#F4F7FF] rounded-2xl p-3">
+                            <button class=" btn bg-white rounded-xl ">Google LLC</button>
+                            <h1 class="text-2xl font-medium my-2">Integrate OpenAI API </h1>
+                            <p class="bg-white p-4 rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            <div class="flex justify-between items-center pt-5">
+                                <p>Deadline <br> 21 March 2025</p>
+                                <button id="completed-btn-05" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                            </div>
+                        </div>                        
+                        <div id="section-7" class="bg-[#F4F7FF] rounded-2xl p-3">
+                            <button class=" btn bg-white rounded-xl ">Glassdoar</button>
+                            <h1 class="text-2xl font-medium my-2">Improve Job searching </h1>
+                            <p class="bg-white p-4 rounded-2xl">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            <div class="flex justify-between items-center pt-5">
+                                <p>Deadline <br> 21 March 2025</p>
+                                <button id="completed-btn-06" class="btn bg-[#3752FD] text-white rounded-xl">Completed</button>
+                            </div>
+                        </div>                        
+                                         
+                    </div>
                 </div>
-              </div>
 
 
-              <div class="collapse bg-base-100 border border-base-300 mt-4">
-                <input type="radio" name="my-accordion-1" />
-                <div class="collapse-title font-semibold text-xl">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
-                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.
-                  <table>
-                    <tr>
-                        <th>Topics</th>
-                        <th>html tag acceptance</th>
-                        <th>hidden text acceptance</th>
-                        <th>Parformance</th>
-                        <th>security</th>
-                    </tr>
-                    <tr>
-                        <td>innerHTML</td>
-                        <td>Accepted</td>
-                        <td>Accepted</td>
-                        <td>Slow</td>
-                        <td>Not Secure</td>
-                    </tr>
-                    <tr>
-                        <td>innerText</td>
-                        <td>Not accepted</td>
-                        <td>Not accepted</td>
-                        <td>Fast</td>
-                        <td>Secure</td>
-                    </tr>
-                    <tr>
-                        <td>textContent</td>
-                        <td>Not accepted</td>
-                        <td>Accepted</td>
-                        <td>Faster</td>
-                        <td>Secure</td>
-                    </tr>
-                </table>
-                <p class="ml-10 mt-0 mb-6">#innerHTML is Not Secure কারণ এটি ইউজারের ইনপুট থেকে স্ক্রিপ্ট এক্সিকিউট করতে পারে।</p>
+
+                <!-- right div  -->
+                <div class="bg-white border w-1/4 rounded-2xl">
+                    <div class="flex justify-center items-center gap-3 my-8">
+                        <img class="h-6 w-6" src="assets/activity.png" alt="activity">
+                        <h2 class="font-medium ">Activity Log</h2>
+                    </div>
+                    <div class="flex justify-center">
+                    <button class="btn bg-[#3752FD] text-white rounded-xl">Clear History</button>
+                    </div>
+                    <div id="divdiye">
+                        <!-- <p class="abc">1200</p> -->
+                    </div>
                 </div>
-              </div>
-
-
-              <div class="collapse bg-base-100 border border-base-300 mt-4">
-                <input type="radio" name="my-accordion-1" />
-                <div class="collapse-title font-semibold text-xl">Question-3: What is event delegation in the DOM?</div>
-                <div class="collapse-content text-sm ml-6">ইভেন্ট ডেলিগেটে হল একটি মেথর্ড যা চাইল্ড এলিমেন্টের পরিবর্তে প্যারেন্ট এলিমেন্টে ইভেন্ট লিসেনার সেট করে চাইল্ড এলিমেন্টের ইভেন্টগুলো হ্যান্ডেল করে।  ইভেন্ট ডেলিগেটে ইভেন্ট বাবলের মাদ্ধমে চাইল্ড এলিমেন্টে ইভেন্ট চালালে প্যারেন্ট প্রযন্ত চোলে যায়, তাই আলাদা আলাদা ইভেন্ট লিসেনার দিতে লাগে না এতে প্রোগ্রাম হালকা হয় এবং দ্রুত রান কর।    </div>
-              </div>
-
-
-              <div class="collapse bg-base-100 border border-base-300 mt-4">
-                <input type="radio" name="my-accordion-1" />
-                <div class="collapse-title font-semibold text-xl">Question-4: What is event bubbling in the DOM?</div>
-                <div class="collapse-content text-sm ml-6">event bubbling  হল একটি মেথর্ড  যা চাইল্ড এলিমেন্টের মাধ্যমে parent element  হয়ে ক্রমশ উপরের দিকে propagate হয়।  এটি সাধারণত প্রোগ্রামের ভিতর থেকে বাহিরের দিকে যায় তাই পারেন event elements একই event  ক্যাপচার করতে পারে তাই event bubbling  চলতেই থাকে তাই এটি থামানোর জন্য আলাদা করে কমান্ড দিতে হয়  যাতে কাঙ্ক্ষিত জায়গা প্রজন্ত গিয়ে কাজ কর।  event.stopPropagation() দিয়ে নিদিষ্ট জায়গায় কাজ করতে পারি।</div>
-              </div>
-
-              <div class="collapse bg-base-100 border border-base-300 mt-4">
-                <input type="radio" name="my-accordion-1" />
-                <div class="collapse-title font-semibold text-xl">Question-5: How do you create, add, and remove elements using JavaScript?</div>
-                <div class="collapse-content text-sm ml-6">
-                    <h3 class="font-bold">Create Elements</h3>
-                      <p class="ml-6">document.createElement() দিয়ে এলিমেন্ট নির্ধারণ করবো <br>
-                        .innerText = " "   এ বলে দিতে হবে এলিমেন্টের মধ্যে কি লেখা থাকবে <br>
-                        .appendChild() দিয়ে কমান্ড করে এলিমেন্ট পুশ করে দিব </p>
-                    <h3 class="font-bold">Add Elements</h3>
-                      <p class="ml-6">
-                        কিভাবে add করা যায় তা উপরেই বলে দিয়েছি তবে ইটা ছাড়া আরো কিছু কমান্ড আছে যা দিয়ে তৈরী করে element কে add   করা যায় যেমন : <br>
-                          .appendChild() <br>
-                          .append()
-                      </p>
-                    <h3 class="font-bold">Remove Elements</h3>
-                      <p class="ml-6">
-                        .remove() টার্গেটেড element কে সরাসরি এলিমেন্ট মুছে ফেলা যায় <br>
-                        .removeChild() Parent element থেকে নির্দিষ্ট Child element মুছে ফেলা যায় 
-                      </p>
-                </div>
-              </div>
-            </div>
-        </header>
-
-        
-       
-
-
-
-
-
-      </section>
-      <script src="js/js.js"></script>
+          </section>
+    </section>
+    <script src="js/js.js"></script>
 </body>
 </html>

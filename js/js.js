@@ -1,9 +1,9 @@
 
     function goToNextPage() {
-        window.location.href="index.html"
+        window.location.href="./nextPage/index.html"
     }
     function backToBoard() {
-        window.location.href="devBoard.html"
+        window.location.href="index.html"
     }
 
     function date() {
