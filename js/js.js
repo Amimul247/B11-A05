@@ -1,6 +1,6 @@
 
     function goToNextPage() {
-        window.location.href="./nextPage/index.html"
+        window.location.href="index-next.html"
     }
     function backToBoard() {
         window.location.href="index.html"
